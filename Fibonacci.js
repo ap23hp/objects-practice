@@ -26,6 +26,24 @@ const fibonacci = function(num) {
   return arr[num - 1];
 };
 
-console.log(fibonacci(4));  // 3
-console.log(fibonacci("6")); // 8
-console.log(fibonacci(-2));  // OOPS
+// console.log(fibonacci(4));  // 3
+// console.log(fibonacci("6")); // 8
+// console.log(fibonacci(-2));  // OOPS
+
+const books = [
+  {
+    title: 'Book',
+    author: 'Name'
+  },
+  {
+    title: 'Book2',
+    author: 'Name2'
+  }
+]
+//Your job is to write a function that takes the array and returns an array of titles:
+function getTheTitles(arr){
+  return arr.map(function(ele){
+return ele.title
+    })
+}
+console.log(getTheTitles(books)) // ['Book','Book2']
