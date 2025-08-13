@@ -30,3 +30,31 @@ id : user1.id}
 
 console.log(usersMapped)
 
+//Write the function sortByAge(users) that gets an array of objects with 
+// the age property and sorts them by age.
+
+let john2 = { name: "John", age: 25 };
+let pete2 = { name: "Pete", age: 30 };
+let mary2 = { name: "Mary", age: 28 };
+
+let arr = [ pete2, john2, mary2 ];
+
+const sortByAge=function(arr){
+return arr.sort((a,b)=>a.age-b.age)
+}
+console.log("--------------------sorting--------------")
+console.log(sortByAge(arr));
+
+//Write the function getAverageAge(users) that gets
+//  an array of objects with property age and returns the average age.
+
+let john3 = { name: "John", age: 25 };
+let pete3 = { name: "Pete", age: 30 };
+let mary3 = { name: "Mary", age: 29 };
+
+let arr1 = [ john3, pete3, mary3 ];
+const getAverageAge=function(arrr){
+return arrr.reduce((acc,curr)=>acc+curr.age,0)/arrr.length
+}
+console.log(`-----------reduce-----------------------------`)
+console.log( getAverageAge(arr1))  // (25 + 30 + 29) / 3 = 28
